@@ -1,0 +1,146 @@
+<!Doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+		 }
+		 #jd{
+			width:960px;
+			height:350px;
+			border:1px solid red;
+			background: url("./imgs/ad01.jpg");
+			position: relative;
+			margin:100px auto;
+		  }
+		#left{
+			width: 41px;
+			height: 68px;
+			border:1px solid red;
+			float: left;
+			position: absolute;
+			left:5px;
+			top:125px;
+			display: none;
+
+		 }
+		#right{
+			width: 41px;
+			height: 68px;
+			border:1px solid red;
+			float: right;
+			position: absolute;
+			right: 5px;
+			top:125px;	
+			display: none;	
+		 }
+		 ul{
+			list-style-type:none;
+		  }
+		#number{
+			width:200px;
+			height:30px;
+			border:1px solid red;
+			background: #ddd;
+			position: absolute;
+			top: 310px;
+			left: 350px;
+		 }
+		 #number li{
+			float: left;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			width: 50px;
+		  }
+	</style>
+</head>
+<body>
+	<div id="jd">
+		<div id="left"></div>
+		<div id="right"></div>
+		<div id="number">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var  jd=document.getElementById("jd");
+	var  jdL=document.getElementById("left");
+	var  jdR=document.getElementById("right");
+	var  lis=document.getElementById('number').getElementsByTagName('li');
+	var len=lis.length;
+
+	jd.onmouseover=function(){
+		jdL.style.display="block";
+		jdR.style.display="block";
+		jdL.style.background="url('./imgs/lwhite.png')";
+		jdR.style.background="url('./imgs/rwhite.png')";
+		clearInterval(lun);
+	 }
+	 jd.onmouseout=function(){
+		jdL.style.display="none";
+		jdR.style.display="none";
+		show();
+	 }
+
+		var a=1;
+		jdR.onclick=function(){
+			a=a+1;
+				if(a>len){ 
+					a=1;
+				}
+			jd.style.background="url('./imgs/ad0"+a+".jpg')";
+				var b=a-1;
+			for(var i=0;i<len;i++){ 
+				lis[i].style.background="#ccc";
+				if(b==i){
+					lis[i].style.background="#f00";
+				 }
+			}
+
+		 }
+		 jdL.onclick=function(){
+			a=a-1;
+				if(a<1){ 
+					a=len;
+				}
+			jd.style.background="url('./imgs/ad0"+a+".jpg')";
+				var b=a-1;
+			for(var i=0;i<len;i++){ 
+				lis[i].style.background="#ccc";
+				if(b==i){
+					lis[i].style.background="#f00";
+				 }
+			}
+
+		 }
+
+		function show(){
+			lun=setInterval(function(){ 
+			a=a+1;
+				if(a>len){ 
+					a=1;
+				}
+			jd.style.background="url('./imgs/ad0"+a+".jpg')";
+			var b=a-1;
+			for(var i=0;i<len;i++){ 
+				lis[i].style.background="#ccc";
+				if(b==i){
+					lis[i].style.background="#f00";
+				 }
+			}
+
+			},3000);
+		 }
+		 show();
+	</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+E:\Ruanmou\Project0517\Project0517\bin\Project0517.dll
+E:\Ruanmou\Project0517\Project0517\bin\Project0517.pdb
+E:\Ruanmou\Project0517\Project0517\obj\Debug\Project0517.csprojResolveAssemblyReference.cache
+E:\Ruanmou\Project0517\Project0517\obj\Debug\Project0517.dll
+E:\Ruanmou\Project0517\Project0517\obj\Debug\Project0517.pdb

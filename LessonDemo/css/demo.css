@@ -1,0 +1,43 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+}
+
+#nav {
+    /*border: 1px solid blue;*/
+    width: 220px;
+    height: 476px;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+
+#first {
+    height: 50px;
+    color: #fff;
+    padding: 0 15px;
+    line-height: 50px;
+    background-color: #188EEE;
+}
+
+.item {
+    padding: 0 15px;
+    line-height: 71px;
+    height: 71px;
+    color: #fff;
+    background-color: #0477c0;
+    border-bottom: 1px solid #1681c4;
+}
+.active {
+background-color:#0264a3;
+}
+.content {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:980px;
+    height:420px;
+    border:2px solid #0264a3;
+    display:none;
+}
